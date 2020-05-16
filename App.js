@@ -1,18 +1,34 @@
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import {
+  StyleSheet,
+  SafeAreaView,
+  Button,
+  Alert,
+  Platform,
+  StatusBar,
+} from "react-native";
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Bonjour Rabah!</Text>
-    </View>
+    <SafeAreaView style={[styles.container]}>
+      <Button
+        color='#F44336'
+        title='Click'
+        onPress={() =>
+          Alert.prompt("My title", "My message", text =>
+            console.log(`user entered ${text}`)
+          )
+        }
+      />
+    </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
+    backgroundColor: "#f7f7f7",
+    paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
     alignItems: "center",
     justifyContent: "center",
   },
