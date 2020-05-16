@@ -6,20 +6,21 @@ import {
   Alert,
   Platform,
   StatusBar,
+  View,
+  Dimensions,
 } from "react-native";
 
 export default function App() {
+  console.log(Dimensions.get("screen"));
   return (
     <SafeAreaView style={[styles.container]}>
-      <Button
-        color='#F44336'
-        title='Click'
-        onPress={() =>
-          Alert.prompt("My title", "My message", text =>
-            console.log(`user entered ${text}`)
-          )
-        }
-      />
+      <View
+        style={{
+          backgroundColor: "dodgerblue",
+          width: "100%",
+          height: "30%",
+        }}
+      ></View>
     </SafeAreaView>
   );
 }
@@ -29,7 +30,7 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: "#f7f7f7",
     paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
-    alignItems: "center",
-    justifyContent: "center",
+    // alignItems: "center",
+    // justifyContent: "center",
   },
 });
