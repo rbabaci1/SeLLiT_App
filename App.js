@@ -3,29 +3,24 @@ import {
   useDimensions,
   useDeviceOrientation,
 } from "@react-native-community/hooks";
-import { View } from "react-native";
+import { View, ImageBackground, Text, StyleSheet } from "react-native";
 
 export default function App() {
   return (
-    <View
-      style={{
-        flex: 1,
-        flexDirection: "row",
-        justifyContent: "center",
-        // alignItems: "center",
-        flexWrap: "wrap",
-        alignContent: "center",
-      }}
-    ></View>
+    <View style={styles.container}>
+      <ImageBackground
+        source={require("./images/background.jpg")}
+        style={styles.image}
+      ></ImageBackground>
+    </View>
   );
 }
 
-// const styles = StyleSheet.create({
-//   container: {
-//     flex: 1,
-//     backgroundColor: "#f7f7f7",
-//     paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
-//     // alignItems: "center",
-//     // justifyContent: "center",
-//   },
-// });
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+  },
+  image: {
+    flex: 1,
+  },
+});
