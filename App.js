@@ -15,6 +15,11 @@ export default function App() {
         <Image source={require("./images/logo-red.png")} style={styles.logo} />
         <Text style={styles.text}>Sell what You Don't Need</Text>
       </ImageBackground>
+
+      <View style={{ width: "100%", height: 50, backgroundColor: "orange" }} />
+      <View
+        style={{ width: "100%", height: 50, backgroundColor: "dodgerblue" }}
+      />
     </View>
   );
 }
