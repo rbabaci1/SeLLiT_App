@@ -9,10 +9,13 @@ export default function App() {
   return (
     <View style={styles.container}>
       <ImageBackground
-        source={require("./images/background.jpg")}
+        source={require("./app/assets/background.jpg")}
         style={styles.bgImage}
       >
-        <Image source={require("./images/logo-red.png")} style={styles.logo} />
+        <Image
+          source={require("./app/assets/logo-red.png")}
+          style={styles.logo}
+        />
         <Text style={styles.text}>Sell what You Don't Need</Text>
       </ImageBackground>
 
