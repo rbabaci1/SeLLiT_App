@@ -8,7 +8,7 @@ export default function App() {
   return (
     <View style={styles.container}>
       {/* <AppText>I love React Native!</AppText> */}
-      <AppButton title='Login' />
+      <AppButton title='Login' onPress={() => console.log("pressed")} />
     </View>
   );
 }
