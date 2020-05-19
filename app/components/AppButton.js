@@ -2,10 +2,10 @@ import React from "react";
 import { View, Text, StyleSheet } from "react-native";
 import colors from "../config/colors";
 
-const AppButton = ({ children }) => {
+const AppButton = ({ title }) => {
   return (
     <View style={styles.button}>
-      <Text style={styles.text}>{children}</Text>
+      <Text style={styles.text}>{title}</Text>
     </View>
   );
 };
