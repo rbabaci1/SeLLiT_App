@@ -1,16 +1,14 @@
 import React from "react";
 import { View, StyleSheet } from "react-native";
-import { MaterialIcons } from "@expo/vector-icons";
 
-import WelcomeScreen from "./app/screens/WelcomeScreen";
-import ViewImageScreen from "./app/screens/ViewImageScreen";
 import AppText from "./app/components/AppText";
+import Button from "./app/components/Button";
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <AppText>I love React Native!</AppText>
-      <MaterialIcons name='email' size={54} color='dodgerblue' />
+      {/* <AppText>I love React Native!</AppText> */}
+      <Button />
     </View>
   );
 }

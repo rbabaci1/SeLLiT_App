@@ -12,7 +12,7 @@ const platformStyle = Platform.select({
 });
 
 const styles = StyleSheet.create({
-  text: { color: "tomato", ...platformStyle },
+  text: { color: "#fff", ...platformStyle },
 });
 
 export default styles;
