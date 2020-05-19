@@ -2,13 +2,13 @@ import React from "react";
 import { View, StyleSheet } from "react-native";
 
 import AppText from "./app/components/AppText";
-import Button from "./app/components/Button";
+import AppButton from "./app/components/AppButton";
 
 export default function App() {
   return (
     <View style={styles.container}>
       {/* <AppText>I love React Native!</AppText> */}
-      <Button>LOGIN</Button>
+      <AppButton>Login</AppButton>
     </View>
   );
 }

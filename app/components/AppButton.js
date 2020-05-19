@@ -1,28 +1,29 @@
 import React from "react";
 import { View, Text, StyleSheet } from "react-native";
-import colors from "../../config/colors";
+import colors from "../config/colors";
 
-const Button = ({ children }) => {
+const AppButton = ({ children }) => {
   return (
-    <View style={styles.container}>
+    <View style={styles.button}>
       <Text style={styles.text}>{children}</Text>
     </View>
   );
 };
 
 const styles = StyleSheet.create({
-  container: {
+  button: {
     backgroundColor: colors.primary,
     width: "100%",
-    paddingVertical: 16,
-    borderRadius: 50,
+    padding: 15,
+    borderRadius: 25,
   },
   text: {
-    color: "#fff",
-    fontSize: 20,
+    color: colors.white,
+    textTransform: "uppercase",
+    fontSize: 18,
     fontWeight: "600",
     textAlign: "center",
   },
 });
 
-export default Button;
+export default AppButton;

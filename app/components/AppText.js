@@ -1,4 +1,9 @@
-import { StyleSheet, Platform } from "react-native";
+import React from "react";
+import { Text, Platform, StyleSheet } from "react-native";
+
+const AppText = ({ children }) => {
+  return <Text style={styles.text}>{children}</Text>;
+};
 
 const platformStyle = Platform.select({
   ios: {
@@ -15,4 +20,4 @@ const styles = StyleSheet.create({
   text: { color: "#fff", ...platformStyle },
 });
 
-export default styles;
+export default AppText;
