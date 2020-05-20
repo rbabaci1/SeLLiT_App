@@ -1,8 +1,8 @@
 import React from "react";
 import { Text, Platform, StyleSheet } from "react-native";
 
-const AppText = ({ children }) => {
-  return <Text style={styles.text}>{children}</Text>;
+const AppText = ({ children, style }) => {
+  return <Text style={[styles.text, style]}>{children}</Text>;
 };
 
 const platformStyle = Platform.select({
@@ -17,7 +17,7 @@ const platformStyle = Platform.select({
 });
 
 const styles = StyleSheet.create({
-  text: { color: "#fff", ...platformStyle },
+  text: { color: "black", ...platformStyle },
 });
 
 export default AppText;
