@@ -7,8 +7,17 @@ import colors from "../config/colors";
 const ViewImageScreen = () => {
   return (
     <View style={styles.container}>
-      <View style={styles.closeIcon} />
-      <View style={styles.deleteIcon} />
+      <View style={styles.closeIcon}>
+        <MaterialCommunityIcons name='close' color='white' size={40} />
+      </View>
+
+      <View style={styles.deleteIcon}>
+        <MaterialCommunityIcons
+          name='trash-can-outline'
+          color='white'
+          size={40}
+        />
+      </View>
 
       <Image
         resizeMode='contain'
@@ -26,20 +35,14 @@ const styles = StyleSheet.create({
   },
 
   closeIcon: {
-    width: 50,
-    height: 50,
     position: "absolute",
     top: 40,
     left: 30,
-    backgroundColor: colors.primary,
   },
   deleteIcon: {
-    width: 50,
-    height: 50,
     position: "absolute",
     top: 40,
     right: 30,
-    backgroundColor: colors.secondary,
   },
   image: {
     height: "100%",
