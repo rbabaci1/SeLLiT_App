@@ -1,11 +1,5 @@
 import React from "react";
-import {
-  StyleSheet,
-  FlatList,
-  SafeAreaView,
-  Platform,
-  StatusBar,
-} from "react-native";
+import { StyleSheet, FlatList, SafeAreaView } from "react-native";
 import Constants from "expo-constants";
 
 import ListItem from "../components/ListItem";
