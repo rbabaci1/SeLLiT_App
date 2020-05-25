@@ -3,7 +3,7 @@ import { FlatList, View, StyleSheet } from "react-native";
 
 import ListItem from "../components/ListItem";
 import Screen from "../components/Screen";
-import ListItemSeparator from "../components/ListItemSeperator";
+import ListItemSeparator from "../components/ListItemSeparator";
 
 const messages = [
   {
