@@ -24,9 +24,9 @@ const initialMessages = [
 const MessagesScreen = () => {
   const [messages, setMessages] = useState(initialMessages);
 
-  const handlePress = e => console.log("List item pressed!");
-
-  const handleDelete = message => {};
+  const handleDelete = message => {
+    setMessages(messages.filter(msg => msg.id !== message.id));
+  };
 
   return (
     <Screen>
@@ -38,11 +38,9 @@ const MessagesScreen = () => {
             title={item.title}
             subTitle={item.description}
             image={item.image}
-            onPress={handlePress}
+            onPress={() => console.log("List item pressed!")}
             renderRightActions={() => (
-              <ListItemDeleteAction
-                onPress={() => console.log("Delete action on: ", item)}
-              />
+              <ListItemDeleteAction onPress={() => handleDelete(item)} />
             )}
           />
         )}
