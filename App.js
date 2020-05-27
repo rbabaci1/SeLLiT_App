@@ -6,21 +6,13 @@ import Card from "./app/components/Card";
 import ListingDetailsScreen from "./app/screens/ListingDetailsScreen";
 import ViewImageScreen from "./app/screens/ViewImageScreen";
 import MessagesScreen from "./app/screens/MessagesScreen";
-import MyAccountScreen from "./app/screens/MyAccountScreen";
+import AccountScreen from "./app/screens/AccountScreen";
 import Screen from "./app/components/Screen";
 import ListItem from "./app/components/ListItem";
 import Icon from "./app/components/Icon";
 
 export default function App() {
-  return (
-    <Screen>
-      <ListItem
-        title='My title'
-        subTitle='My subtitle'
-        ImageComponent={<Icon name='email' />}
-      />
-    </Screen>
-  );
+  return <AccountScreen />;
 }
 
 const styles = StyleSheet.create({

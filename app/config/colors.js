@@ -4,7 +4,6 @@ export default {
   secondary: "#4ecdc4",
   black: "#000",
   white: "#fff",
-  light: "#c5c3c3",
-  danger: "#ff5252",
-  yellow: "#ffe66d",
+  light: "#f3f2f2",
+  danger: "#fff552",
 };
