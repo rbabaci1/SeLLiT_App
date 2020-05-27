@@ -5,17 +5,17 @@ import { MaterialCommunityIcons } from "@expo/vector-icons";
 import colors from "../config/colors";
 import AppText from "./AppText";
 
-const AccountListItem = ({ iconName, text, bg }) => {
+const AccountListItem = ({ iconName, bgColor, children }) => {
   return (
     <View style={styles.listContainer}>
-      <View style={[styles.listItem, { backgroundColor: colors[bg] || bg }]}>
+      <View style={[styles.listItem, { backgroundColor: colors[bgColor] }]}>
         <MaterialCommunityIcons
           name={iconName}
           size={25}
           color={colors.white}
         />
       </View>
-      <AppText>{text}</AppText>
+      <AppText>{children}</AppText>
     </View>
   );
 };
@@ -28,7 +28,6 @@ const styles = StyleSheet.create({
     marginVertical: 10,
   },
   listItem: {
-    backgroundColor: colors.danger,
     padding: 10,
     borderRadius: 25,
     marginRight: 10,

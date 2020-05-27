@@ -1,6 +1,5 @@
 import React from "react";
 import { View, StyleSheet, Image } from "react-native";
-import { MaterialCommunityIcons } from "@expo/vector-icons";
 
 import Screen from "../components/Screen";
 import AppText from "../components/AppText";
@@ -10,31 +9,33 @@ import AccountListItem from "../components/AccountListItem";
 const MyAccountScreen = () => {
   return (
     <Screen>
-      <View style={styles.container}>
+      <View style={styles.userContainer}>
         <Image
           style={styles.image}
           source={require("../assets/IMG_1336.jpg")}
         />
 
         <View>
-          <AppText style={styles.name}>Rabah Babaci</AppText>
+          <AppText>Rabah Babaci</AppText>
           <AppText style={styles.email}>RabahBabaci3@gmail.com</AppText>
         </View>
       </View>
 
-      <AccountListItem
-        iconName='format-list-bulleted'
-        text='My Listings'
-        bg='primary'
-      />
-      <AccountListItem iconName='email' text='My Messages' bg='secondary' />
-      <AccountListItem iconName='logout' text='Log Out' bg='#ffe66d' />
+      <AccountListItem iconName='format-list-bulleted' bgColor='primary'>
+        My Listings
+      </AccountListItem>
+      <AccountListItem iconName='email' bgColor='secondary'>
+        My Messages
+      </AccountListItem>
+      <AccountListItem iconName='logout' bgColor='yellow'>
+        Log Out
+      </AccountListItem>
     </Screen>
   );
 };
 
 const styles = StyleSheet.create({
-  container: {
+  userContainer: {
     flexDirection: "row",
     alignItems: "center",
     padding: 15,
