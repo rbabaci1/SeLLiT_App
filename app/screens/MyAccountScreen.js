@@ -1,9 +1,11 @@
 import React from "react";
 import { View, StyleSheet, Image } from "react-native";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
+
 import Screen from "../components/Screen";
 import AppText from "../components/AppText";
 import colors from "../config/colors";
+import AccountListItem from "../components/AccountListItem";
 
 const MyAccountScreen = () => {
   return (
@@ -19,6 +21,14 @@ const MyAccountScreen = () => {
           <AppText style={styles.email}>RabahBabaci3@gmail.com</AppText>
         </View>
       </View>
+
+      <AccountListItem
+        iconName='format-list-bulleted'
+        text='My Listings'
+        bg='primary'
+      />
+      <AccountListItem iconName='email' text='My Messages' bg='secondary' />
+      <AccountListItem iconName='logout' text='Log Out' bg='#ffe66d' />
     </Screen>
   );
 };
