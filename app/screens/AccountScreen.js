@@ -2,7 +2,6 @@ import React from "react";
 import { View, StyleSheet, FlatList } from "react-native";
 
 import Screen from "../components/Screen";
-import AppText from "../components/AppText";
 import colors from "../config/colors";
 import Icon from "../components/Icon";
 import ListItem from "../components/ListItem";
