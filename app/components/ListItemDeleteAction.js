@@ -1,15 +1,23 @@
 import React from "react";
-import { View, Text, StyleSheet } from "react-native";
+import { View, StyleSheet } from "react-native";
+import { MaterialCommunityIcons } from "@expo/vector-icons";
+
 import colors from "../config/colors";
 
 const ListItemDeleteAction = () => {
-  return <View style={styles.container}></View>;
+  return (
+    <View style={styles.container}>
+      <MaterialCommunityIcons name='trash-can' size={40} color={colors.white} />
+    </View>
+  );
 };
 
 const styles = StyleSheet.create({
   container: {
     backgroundColor: colors.danger,
-    width: 70,
+    width: 75,
+    alignItems: "center",
+    justifyContent: "center",
   },
 });
 
