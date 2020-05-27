@@ -10,9 +10,10 @@ import AccountScreen from "./app/screens/AccountScreen";
 import Screen from "./app/components/Screen";
 import ListItem from "./app/components/ListItem";
 import Icon from "./app/components/Icon";
+import ListingsScreen from "./app/screens/ListingsScreen";
 
 export default function App() {
-  return <AccountScreen />;
+  return <ListingsScreen />;
 }
 
 const styles = StyleSheet.create({
