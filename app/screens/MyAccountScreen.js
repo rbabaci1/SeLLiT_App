@@ -4,7 +4,7 @@ import { View, StyleSheet, Image } from "react-native";
 import Screen from "../components/Screen";
 import AppText from "../components/AppText";
 import colors from "../config/colors";
-import AccountListItem from "../components/AccountListItem";
+import Icon from "../components/Icon";
 
 const MyAccountScreen = () => {
   return (
@@ -21,15 +21,25 @@ const MyAccountScreen = () => {
         </View>
       </View>
 
-      <AccountListItem iconName='format-list-bulleted' bgColor='primary'>
+      <Icon
+        name='format-list-bulleted'
+        size={25}
+        backgroundColor='primary'
+        iconColor='white'
+      >
         My Listings
-      </AccountListItem>
-      <AccountListItem iconName='email' bgColor='secondary'>
+      </Icon>
+      <Icon
+        name='email'
+        size={25}
+        backgroundColor='secondary'
+        iconColor='white'
+      >
         My Messages
-      </AccountListItem>
-      <AccountListItem iconName='logout' bgColor='yellow'>
+      </Icon>
+      <Icon name='logout' size={25} backgroundColor='yellow' iconColor='white'>
         Log Out
-      </AccountListItem>
+      </Icon>
     </Screen>
   );
 };
