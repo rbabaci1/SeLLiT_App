@@ -8,7 +8,7 @@ import AppText from "./AppText";
 const AccountListItem = ({ iconName, text, bg }) => {
   return (
     <View style={styles.listContainer}>
-      <View style={[styles.accountList, { backgroundColor: colors[bg] || bg }]}>
+      <View style={[styles.listItem, { backgroundColor: colors[bg] || bg }]}>
         <MaterialCommunityIcons
           name={iconName}
           size={25}
@@ -21,16 +21,17 @@ const AccountListItem = ({ iconName, text, bg }) => {
 };
 
 const styles = StyleSheet.create({
-  accountList: {
-    backgroundColor: colors.danger,
-    padding: 10,
-    borderRadius: 25,
-    marginRight: 10,
-  },
   listContainer: {
     padding: 15,
     flexDirection: "row",
     alignItems: "center",
+    marginVertical: 10,
+  },
+  listItem: {
+    backgroundColor: colors.danger,
+    padding: 10,
+    borderRadius: 25,
+    marginRight: 10,
   },
 });
 
