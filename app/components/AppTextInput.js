@@ -30,6 +30,8 @@ const styles = StyleSheet.create({
     padding: 15,
     marginVertical: 10,
   },
-  icon: { marginRight: 10 },
+  icon: {
+    marginRight: 10,
+  },
   textInput: text,
 });

@@ -14,8 +14,19 @@ import Screen from "./Screen";
 import PickerItem from "./PickerItem";
 import { colors } from "../config/styles";
 
-export default function AppPicker({ icon, placeholder, items }) {
+export default function AppPicker({
+  icon,
+  placeholder,
+  items,
+  selectedItem,
+  onSelectItem,
+}) {
   const [modalVisible, setModelVisible] = useState(false);
+
+  const handleSelection = item => {
+    setModelVisible(false);
+    onSelectItem(item);
+  };
 
   return (
     <>
@@ -30,7 +41,9 @@ export default function AppPicker({ icon, placeholder, items }) {
             />
           )}
 
-          <AppText style={styles.text}>{placeholder}</AppText>
+          <AppText style={styles.text}>
+            {selectedItem ? selectedItem.label : placeholder}
+          </AppText>
 
           <MaterialCommunityIcons
             name="chevron-down"
@@ -47,8 +60,11 @@ export default function AppPicker({ icon, placeholder, items }) {
           <FlatList
             data={items}
             keyExtractor={item => item.value.toString()}
-            renderItem={({ item: { label } }) => (
-              <PickerItem label={label} onPress={() => console.log(label)} />
+            renderItem={({ item }) => (
+              <PickerItem
+                label={item.label}
+                onPress={() => handleSelection(item)}
+              />
             )}
           />
         </Screen>
@@ -66,7 +82,9 @@ const styles = StyleSheet.create({
     padding: 15,
     marginVertical: 10,
   },
-  icon: { marginRight: 10 },
+  icon: {
+    marginRight: 10,
+  },
   text: {
     flex: 1,
   },
