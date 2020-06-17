@@ -11,27 +11,15 @@ import Screen from "./app/components/Screen";
 import ListItem from "./app/components/ListItem";
 import Icon from "./app/components/Icon";
 import ListingsScreen from "./app/screens/ListingsScreen";
+import AppTextInput from "./app/components/AppTextInput";
 
 export default function App() {
   const [firstName, setFirstName] = useState("");
 
   return (
-    <AccountScreen />
-    // <Screen>
-    //   <Text>{firstName}</Text>
-    //   <TextInput
-    //     keyboardType="numeric"
-    //     clearButtonMode="always"
-    //     secureTextEntry
-    //     onChangeText={text => setFirstName(text)}
-    //     placeholder="First Name"
-    //     style={{
-    //       borderBottomColor: "#ccc",
-    //       borderBottomWidth: 1,
-    //       fontSize: 24,
-    //     }}
-    //   />
-    // </Screen>
+    <Screen>
+      <AppTextInput icon="email" placeholder="Email" />
+    </Screen>
   );
 }
 
