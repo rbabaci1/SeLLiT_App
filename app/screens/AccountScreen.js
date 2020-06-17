@@ -24,8 +24,8 @@ const AccountScreen = () => {
       <View style={styles.container}>
         <ListItem
           image={require("../assets/IMG_1336.jpg")}
-          title='Rabah Babaci'
-          subTitle='rbabaci1@gmai.com'
+          title="Rabah Babaci"
+          subTitle="rbabaci1@gmai.com"
         />
       </View>
 
@@ -49,8 +49,8 @@ const AccountScreen = () => {
       </View>
 
       <ListItem
-        title='Log Out'
-        IconComponent={<Icon name='logout' backgroundColor='#f9df61' />}
+        title="Log Out"
+        IconComponent={<Icon name="logout" backgroundColor="#f9df61" />}
       />
     </Screen>
   );
@@ -62,15 +62,6 @@ const styles = StyleSheet.create({
   },
   container: {
     marginVertical: 20,
-  },
-  image: {
-    width: 70,
-    height: 70,
-    borderRadius: 35,
-    marginRight: 10,
-  },
-  email: {
-    color: colors.medium,
   },
 });
 
